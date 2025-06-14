@@ -6,7 +6,7 @@ import pandas as pd
 pipe = pickle.load(open("pipe.pkl", "rb"))
 df = pickle.load(open("df.pkl","rb"))
 st.title("Freelancer Price Estimator")
-st.write("Welcome to the Freelancer Dashboard! Here you can predict the hourly rate charged by a freelancer, based on feature like years of experiences, average rating, domain, and more.")
+st.write("Welcome to the Freelancer Price Estimator Web App! Here you can predict the hourly rate charged by a freelancer, based on feature like years of experiences, average rating, domain, and more.")
 
 # Domain selectbox
 domain = st.selectbox("Domain", df["Domain"].unique())
