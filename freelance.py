@@ -6,7 +6,7 @@ import pandas as pd
 pipe = pickle.load(open("pipe.pkl", "rb"))
 df = pickle.load(open("df.pkl","rb"))
 st.title("Freelancer Dashboard")
-st.write("Welcome to the Freelancer Dashboard! Here you can predict the hourly rate charged by a freelancer, based on feature like years of exoeriences, average rating, domain, and more.")
+st.write("Welcome to the Freelancer Dashboard! Here you can predict the hourly rate charged by a freelancer, based on feature like years of experiences, average rating, domain, and more.")
 
 st.title("Freelancer Price Estimator")
 
@@ -50,10 +50,6 @@ learning = st.slider("Learning Hours per Week",
 # New freelancer
 new = st.radio("Is New Freelancer", [0, 1])
 
-# if st.button("Predict Hourly Price") :
-#     query = np.array([domain,experience,project,rating,premium_certified,portfolio_pieces,learning,new ])
-#     query = query.reshape(1,8)
-#     st.title(pipe.predict(query))
 if st.button("Predict Hourly Price"):
     input_df = pd.DataFrame([{
         "Domain": domain,
